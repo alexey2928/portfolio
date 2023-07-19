@@ -9,14 +9,14 @@ const Logo = () => {
 		<nav className="flex items-center justify-center mt-2">
 			<MotionLink
 				href="/"
-				className="w-48 h-16 border flex items-center justify-center rounded-full text-xl"
+				className="w-16 h-16 border flex items-center justify-center rounded-full text-xl"
 				whileHover={{
 					backgroundColor: "whitesmoke",
 					fontWeight: "bold",
 					transition: { duration: 1, repeat: Infinity },
 				}}
 			>
-				Aliaksei Kalupaila
+				AK
 			</MotionLink>
 		</nav>
 	);

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
 import Logo from "./Logo";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 const NavLink = ({ href, title, className = "" }) => {
 	const pathname = usePathname();
@@ -57,24 +58,36 @@ const Navbar = () => {
 				<Logo />
 			</div>
 			<nav className="flex items-center">
-				<Link
-					href="https://github.com/alexey2928"
-					className="mr-4"
+				<motion.div
+					className="w-12 h-12 border flex items-center justify-center rounded-full shadow-md text-xl mr-4"
+					whileHover={{
+						y: -2,
+					}}
 				>
-					<BsGithub />
-				</Link>
-				<Link
-					href="https://www.linkedin.com/in/akalupaila/"
-					className="mx-4"
+					<Link href="https://github.com/alexey2928">
+						<BsGithub />
+					</Link>
+				</motion.div>
+				<motion.div
+					className="w-12 h-12 border flex items-center justify-center rounded-full shadow-md text-xl mx-4"
+					whileHover={{
+						y: -2,
+					}}
 				>
-					<BsLinkedin />
-				</Link>
-				<Link
-					href="https://www.instagram.com/aliaksei2928/"
-					className="ml-4"
+					<Link href="https://www.linkedin.com/in/akalupaila/">
+						<BsLinkedin />
+					</Link>
+				</motion.div>
+				<motion.div
+					className="w-12 h-12 border flex items-center justify-center rounded-full shadow-md text-xl ml-4"
+					whileHover={{
+						y: -2,
+					}}
 				>
-					<BsInstagram />
-				</Link>
+					<Link href="https://www.instagram.com/aliaksei2928/">
+						<BsInstagram />
+					</Link>
+				</motion.div>
 			</nav>
 		</header>
 	);
