@@ -1,18 +1,15 @@
-import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import homepagePic from "../../public/images/home.png";
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import { BsDownload } from "react-icons/bs";
-import Footer from "@/components/Footer";
 import HireMe from "@/components/HireMe";
 
 export default function Home() {
 	return (
 		<>
 			<main className="min-h-screen w-full bg-light">
-				<Navbar />
 				<Layout className="pt-0">
 					<div className="flex items-center justify-between w-full">
 						<div className="w-1/2">
@@ -58,7 +55,6 @@ export default function Home() {
 					</div>
 				</Layout>
 				<HireMe />
-				<Footer />
 			</main>
 		</>
 	);

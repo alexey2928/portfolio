@@ -26,7 +26,7 @@ const NavLink = ({ href, title, className = "" }) => {
 
 const Navbar = () => {
 	return (
-		<header className="w-full px-32 py-8 font-medium flex items-center justify-between">
+		<header className="w-full px-32 py-8 font-medium flex items-center justify-between bg-light">
 			<nav className="flex items-center">
 				<NavLink
 					href="/"
