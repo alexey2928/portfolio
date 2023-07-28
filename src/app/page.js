@@ -1,9 +1,4 @@
-import Image from "next/image";
-import homepagePic from "../../public/images/home.png";
 import Layout from "@/components/Layout";
-import AnimatedText from "@/components/AnimatedText";
-import Link from "next/link";
-import { BsDownload } from "react-icons/bs";
 import HireMe from "@/components/HireMe";
 import Homepage from "@/components/Homepage";
 import Skills from "@/components/Skills";
