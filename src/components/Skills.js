@@ -19,8 +19,12 @@ import AnimatedText from "./AnimatedText";
 const Skills = () => {
   return (
     <div id="skills">
-      <Layout>
-        <AnimatedText text="Technologies I work with" className="mb-16" />
+      <div className="sm:px-12 lg:pl-24">
+        <AnimatedText
+          text="Technologies I work with"
+          className="!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl xl:!text-8xl 
+m-16 lg:mt-24"
+        />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xxl:grid-cols-4 gap-8">
           <Skill image={Html} text="Html" />
           <Skill image={Javascript} text="Javascript" />
@@ -35,7 +39,7 @@ const Skills = () => {
           <Skill image={Postgresql} text="PostgreSQL" />
           <Skill image={Sequelize} text="Sequelize" />
         </div>
-      </Layout>
+      </div>
     </div>
   );
 };

@@ -2,32 +2,23 @@
 import React, { useRef } from "react";
 import Layout from "./Layout";
 import AnimatedText from "./AnimatedText";
-import bseu from "../../public/images/bseu.png";
-import brookdale from "../../public/images/brookdale.png";
-import fullstack from "../../public/images/fullstack.png";
-import Link from "next/link";
-import Image from "next/image";
 import { motion, useScroll } from "framer-motion";
 
-const Details = ({ school, schoolImage, schoolUrl, degree, major }) => {
+const Details = ({ title, company, location, skills }) => {
   return (
     <li>
       <div className="flex flex-wrap items-center ml-6 my-6">
         <div className="mx-6">
-          <Image
-            src={schoolImage}
-            width="64px"
-            height="64px"
-            alt={school}
-            className="w-full rounded-lg"
-          />
+          <h3 className="font-bold text-lg">{title}</h3>
         </div>
         <div className="mx-6">
-          <Link href={schoolUrl}>
-            <h3 className="font-bold text-lg cursor-pointer">{school}</h3>
-          </Link>
-          <p>{degree}</p>
-          <p>{major}</p>
+          <h4 className="text-lg text-dark/75">{company}</h4>
+          <p>{location}</p>
+          <p>
+            <b>Skills: </b>
+            <br />
+            <i>{skills}</i>
+          </p>
         </div>
       </div>
     </li>
@@ -44,16 +35,16 @@ const Time = ({ time }) => {
   );
 };
 
-const Education = () => {
+const Experience = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "center start"],
+    offset: ["start end", "start start"],
   });
   return (
-    <div id="education" className="sm:px-12 lg:pl-24">
+    <div id="experience" className="sm:px-12 lg:pl-24">
       <AnimatedText
-        text="Education"
+        text="Experience"
         className="!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl xl:!text-8xl 
 m-16 lg:mt-24"
       />
@@ -69,40 +60,37 @@ m-16 lg:mt-24"
             </div>
             <div className="w-[75%] md:w-[50%]">
               <Details
-                school="Fullstack Academy"
-                schoolImage={fullstack}
-                schoolUrl="https://www.fullstackacademy.com/"
-                degree="Certificate"
-                major="Web Development - Software Engineering Immersive"
+                title="Fullstack Software Development Student"
+                company="Fullstack Academy"
+                location="NYC, United States"
+                skills="JavaScript · React.js · PostgreSQL · Git · Web Development · Data Structures · Algorithms · Bootstrap · Express.js · Redux.js · Sequelize.js · HTML · Cascading Style Sheets (CSS)"
               />
             </div>
           </ul>
 
           <ul className="flex items-center">
             <div className="w-[25%] md:w-[50%]">
-              <Time time="Sep 2019 - Dec 2021" />
+              <Time time="Jun 2018 - Jan 2023" />
             </div>
             <div className="w-[75%] md:w-[50%]">
               <Details
-                school="Brookdale Community College"
-                schoolImage={brookdale}
-                schoolUrl="https://www.brookdalecc.edu/"
-                degree="Associate of Science - AS"
-                major="Computer Science"
+                title="Waiter"
+                company="Avenue Le Club"
+                location="Long Branch, NJ, United States"
+                skills="High Pressure Environment · Sales · Organization Skills · Skilled Multi-tasker · Time Management · Teamwork"
               />
             </div>
           </ul>
           <ul className="flex items-center 3">
             <div className="w-[25%] md:w-[50%]">
-              <Time time="Sep 2012 - Jun 2016" />
+              <Time time="Jul 2016 - Jun 2018" />
             </div>
             <div className="w-[75%] md:w-[50%]">
               <Details
-                school="Belarusian State Economic University"
-                schoolImage={bseu}
-                schoolUrl="http://bseu.by/"
-                degree="Bachelor's degree"
-                major="Accounting and Economics"
+                title="Accountant"
+                company="NewProdest"
+                location="Minsk, Belarus"
+                skills="Analytical Skills · Problem Solving · Critical Thinking · Financial Analysis · Corporate Communications"
               />
             </div>
           </ul>
@@ -112,4 +100,4 @@ m-16 lg:mt-24"
   );
 };
 
-export default Education;
+export default Experience;

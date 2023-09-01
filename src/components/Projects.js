@@ -10,35 +10,39 @@ import sportbuddies from "../../public/images/sportbuddies.jpeg";
 const Projects = () => {
   return (
     <div id="projects">
-      <Layout className="">
-        <AnimatedText text="Projects" className="mb-16" />
+      <div className="sm:px-12 lg:pl-24 pb-24">
+        <AnimatedText
+          text="Projects"
+          className="!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl xl:!text-8xl 
+m-16 lg:mt-24"
+        />
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
             title="Weather App"
             backgroundImg={weatherApp}
             tech="Next JS"
-            projectUrl="/weather"
+            projectUrl="/weather-app"
           />
           <ProjectItem
             title="Recipe App"
             backgroundImg={recipeApp}
             tech="Next JS & Open AI"
-            projectUrl="https://www.youtube.com/watch?v=mLxR03vkh7w"
+            projectUrl="/recipe-app"
           />
           <ProjectItem
-            title="Sportbuddies"
+            title="Sportbuddies.us"
             backgroundImg={sportbuddies}
             tech="React & PostgreSQL"
-            projectUrl="https://sportbuddies.us"
+            projectUrl="/sportbuddies-app"
           />
           <ProjectItem
             title="Beauty Salon"
             backgroundImg={lhstudio}
             tech="React & Bootstrap"
-            projectUrl="https://www.youtube.com/watch?v=nSWtsXJcD7k"
+            projectUrl="/lhstudio-app"
           />
         </div>
-      </Layout>
+      </div>
     </div>
   );
 };
