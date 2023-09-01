@@ -16,8 +16,8 @@ const AboutWeatherApp = () => {
       <ul className="font-medium px-4">
         <li className="list-disc">
           Current weather conditions: The app displays the current weather
-          conditions for the user's location or for a specific location that the
-          user enters.
+          conditions for the user&apos;s location or for a specific location
+          that the user enters.
         </li>
         <li className="list-disc">
           Detailed weather information: The app provides detailed information
