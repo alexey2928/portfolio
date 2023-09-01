@@ -13,7 +13,7 @@ import Layout from "@/components/Layout";
 const RecipeApp = () => {
   return (
     <main className="bg-light ">
-      <Layout>
+      <Layout className="mt-8 sm:mt-12 md:mt-16 lg:mt-24">
         <ProjectPage
           title="Recipe App"
           imageUrl={recipeApp}

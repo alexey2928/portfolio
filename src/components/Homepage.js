@@ -7,7 +7,7 @@ import { BsDownload } from "react-icons/bs";
 
 const Homepage = () => {
   return (
-    <div className="sm:px-12 lg:h-screen lg:flex lg:items-start">
+    <div className="sm:px-12 lg:h-screen lg:flex lg:items-starts">
       <div className="flex flex-col items-center justify-between w-full lg:flex-row ">
         <div className="w-1/2">
           <Image

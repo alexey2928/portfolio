@@ -39,7 +39,7 @@ const Experience = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "start start"],
+    offset: ["start end", "center start"],
   });
   return (
     <div id="experience" className="sm:px-12 lg:pl-24">

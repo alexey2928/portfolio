@@ -13,7 +13,7 @@ import Layout from "@/components/Layout";
 const WeatherApp = () => {
   return (
     <main className="bg-light min-h-screen">
-      <Layout>
+      <Layout className="mt-8 sm:mt-12 md:mt-16 lg:mt-24">
         <ProjectPage
           title="Weather App"
           imageUrl={weatherApp}

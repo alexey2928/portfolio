@@ -6,8 +6,7 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
-import { headers } from "next/dist/client/components/headers";
-import HireMe from "./HireMe";
+
 const NavLink = ({ href, title, className = "" }) => {
   const pathname = usePathname();
   return (
@@ -25,7 +24,7 @@ const NavLink = ({ href, title, className = "" }) => {
 };
 
 const Navbar = () => {
-  const [navBar, setNavBar] = useState(false);
+  const [navBar, setNavBar] = useState(true);
 
   const handleNavBar = () => {
     setNavBar(!navBar);
@@ -89,8 +88,8 @@ const Navbar = () => {
           </motion.div>
         </nav>
       </header>
-      <header className="lg:hidden w-full bg-light font-medium">
-        <div className=" bg-light w-full flex items-center justify-between p-4 sm:p-8">
+      <header className="lg:hidden w-full bg-light font-medium sticky top-0 z-50">
+        <div className=" bg-light w-full h-20 flex items-center justify-between p-4 sm:p-8 ">
           <div>
             <Logo />
           </div>
@@ -105,55 +104,67 @@ const Navbar = () => {
             )}
           </div>
         </div>
-        <div
-          className={
-            !navBar
-              ? "lg:hidden left-0 top-0 w-full bg-light h-screen"
-              : "hidden"
-          }
-        >
-          <div className="flex flex-col items-center justify-center">
-            <NavLink href="/" title="Home" className="my-6" />
-            <NavLink href="/#about" title="About" className="my-6" />
-            <NavLink href="/#skills" title="Skills" className="my-6" />
-            <NavLink href="/#education" title="Education" className="my-6" />
-            <NavLink href="/#experience" title="Experience" className="my-6" />
-            <NavLink href="/#projects" title="Projects" className="my-6" />
-          </div>
-          <div className="flex items-center justify-center mt-6">
-            <motion.div
-              className="w-12 h-12 border flex items-center justify-center rounded-full shadow-md text-xl mr-4"
-              whileHover={{
-                y: -2,
-              }}
-            >
-              <Link href="https://github.com/alexey2928">
-                <BsGithub />
-              </Link>
-            </motion.div>
-            <motion.div
-              className="w-12 h-12 border flex items-center justify-center rounded-full shadow-md text-xl mx-4"
-              whileHover={{
-                y: -2,
-              }}
-            >
-              <Link href="https://www.linkedin.com/in/akalupaila/">
-                <BsLinkedin />
-              </Link>
-            </motion.div>
-            <motion.div
-              className="w-12 h-12 border flex items-center justify-center rounded-full shadow-md text-xl ml-4"
-              whileHover={{
-                y: -2,
-              }}
-            >
-              <Link href="https://www.instagram.com/aliaksei2928/">
-                <BsInstagram />
-              </Link>
-            </motion.div>
-          </div>
-        </div>
       </header>
+      <div
+        className={
+          navBar
+            ? "hidden"
+            : "lg:hidden left-0 top-20 w-full sticky bg-light z-50 h-screen overflow-hidden"
+        }
+      >
+        <div className="flex flex-col items-center justify-center">
+          <a href="/" className="my-6" onClick={handleNavBar}>
+            Home
+          </a>
+          <a href="/#about" className="my-6" onClick={handleNavBar}>
+            About
+          </a>
+          <a href="/#skills" className="my-6" onClick={handleNavBar}>
+            Skills
+          </a>
+          <a href="/#education" className="my-6" onClick={handleNavBar}>
+            Education
+          </a>
+          <a href="/#experience" className="my-6" onClick={handleNavBar}>
+            Experience
+          </a>
+          <a href="/#projects" className="my-6" onClick={handleNavBar}>
+            Projects
+          </a>
+        </div>
+        <div className="flex items-center justify-center mt-6">
+          <motion.div
+            className="w-12 h-12 border flex items-center justify-center rounded-full shadow-md text-xl mr-4"
+            whileHover={{
+              y: -2,
+            }}
+          >
+            <Link href="https://github.com/alexey2928">
+              <BsGithub />
+            </Link>
+          </motion.div>
+          <motion.div
+            className="w-12 h-12 border flex items-center justify-center rounded-full shadow-md text-xl mx-4"
+            whileHover={{
+              y: -2,
+            }}
+          >
+            <Link href="https://www.linkedin.com/in/akalupaila/">
+              <BsLinkedin />
+            </Link>
+          </motion.div>
+          <motion.div
+            className="w-12 h-12 border flex items-center justify-center rounded-full shadow-md text-xl ml-4"
+            whileHover={{
+              y: -2,
+            }}
+          >
+            <Link href="https://www.instagram.com/aliaksei2928/">
+              <BsInstagram />
+            </Link>
+          </motion.div>
+        </div>
+      </div>
     </>
   );
 };

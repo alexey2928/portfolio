@@ -11,7 +11,7 @@ import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
     <>
-      <main className=" bg-light">
+      <main className=" bg-light ">
         <Layout>
           <Homepage className="min-h-screen" />
           <About className="min-h-screen" />
