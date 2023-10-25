@@ -56,21 +56,33 @@ m-16 lg:mt-24"
         <div>
           <ul className="flex items-center">
             <div className="w-[25%] md:w-[50%]">
-              <Time time="Nov 2022 - Apr 2023" />
+              <Time time="Jun 2022 - Current" />
             </div>
             <div className="w-[75%] md:w-[50%]">
               <Details
-                title="Fullstack Software Development Student"
-                company="Fullstack Academy"
+                title="Full Stack Developer"
+                company="McKinsey and Company"
                 location="NYC, United States"
-                skills="JavaScript · React.js · PostgreSQL · Git · Web Development · Data Structures · Algorithms · Bootstrap · Express.js · Redux.js · Sequelize.js · HTML · Cascading Style Sheets (CSS)"
+                skills="HTML5 · CSS3 · JavaScript · React.js · Node.js · MySQL · MongoDB · JQuery · JSON · Git · Jira"
               />
             </div>
           </ul>
-
+          <ul className="flex items-center 3">
+            <div className="w-[25%] md:w-[50%]">
+              <Time time="Mar 2020 - Jun 2022" />
+            </div>
+            <div className="w-[75%] md:w-[50%]">
+              <Details
+                title="Jr. Full Stack Developer"
+                company="SumatoSoft"
+                location="Remote, USA"
+                skills="Web Development · HTML5 · CSS3 · JavaScript · React.js · Node.js · MySQL · Git · Bootstrap"
+              />
+            </div>
+          </ul>
           <ul className="flex items-center">
             <div className="w-[25%] md:w-[50%]">
-              <Time time="Jun 2018 - Jan 2023" />
+              <Time time="Jun 2018 - Jan 2020" />
             </div>
             <div className="w-[75%] md:w-[50%]">
               <Details

@@ -5,6 +5,7 @@ import AnimatedText from "./AnimatedText";
 import bseu from "../../public/images/bseu.png";
 import brookdale from "../../public/images/brookdale.png";
 import fullstack from "../../public/images/fullstack.png";
+import qa from "../../public/images/test_planet.jpeg";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll } from "framer-motion";
@@ -89,6 +90,20 @@ m-16 lg:mt-24"
                 schoolUrl="https://www.brookdalecc.edu/"
                 degree="Associate of Science - AS"
                 major="Computer Science"
+              />
+            </div>
+          </ul>
+          <ul className="flex items-center">
+            <div className="w-[25%] md:w-[50%]">
+              <Time time="Aug 2016 - Oct 2016" />
+            </div>
+            <div className="w-[75%] md:w-[50%]">
+              <Details
+                school="Test Planet"
+                schoolImage={qa}
+                schoolUrl="https://test-planet.by/"
+                degree="Certificate"
+                major="Software Testing"
               />
             </div>
           </ul>
