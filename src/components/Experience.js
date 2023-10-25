@@ -75,7 +75,7 @@ m-16 lg:mt-24"
               <Details
                 title="Jr. Full Stack Developer"
                 company="SumatoSoft"
-                location="Remote, USA"
+                location="Remote, United States"
                 skills="Web Development · HTML5 · CSS3 · JavaScript · React.js · Node.js · MySQL · Git · Bootstrap"
               />
             </div>
