@@ -84,13 +84,13 @@ m-16 lg:mt-24"
             project deadlines, even in tight situations.
           </p>
           <h2 className="my-4 text-lg font-bold uppercase text-dark/75">
-            Let's Connect
+            Let&apos;s Connect
           </h2>
           <p className="font-medium mb-4">
-            If you're looking for a dedicated software engineer, I would love to
-            connect and explore potential collaborations. Please feel free to
-            reach out to me, and let's work together to bring your projects to
-            life. Thank you for visiting my portfolio!
+            If you&apos;re looking for a dedicated software engineer, I would
+            love to connect and explore potential collaborations. Please feel
+            free to reach out to me, and let&apos;s work together to bring your
+            projects to life. Thank you for visiting my portfolio!
           </p>
         </div>
         <div className="hidden xl:grid col-span-2 relative h-max rounded-2xl border-2 border-solid - border-dark bg-light p-4">
